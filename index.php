@@ -25,6 +25,27 @@
             background-color: #dddddd;
         }
     </style>
+
+    <script>
+
+
+        function reload() {
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("table").innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("GET", "PHP/reload.php", true);
+            xmlhttp.send();
+        }
+
+        // reloads the datas every 8 seconds
+        const interval = setInterval(function () {
+            reload();
+        }, 8000);
+    </script>
 </head>
 
 <body>
@@ -32,56 +53,58 @@
     <h1>Wetterstation</h1>
     <h3>Test</h3>
 
-    
+    <!--<button type="button" onclick="reload()">Click Me!</button>-->
 
-    <?php
+    <div id="table">
 
-    // Verbindung zur Datenbank herstellen
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "wetterstation";
+        <?php
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+        // Verbindung zur Datenbank herstellen
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "wetterstation";
 
-    // Überprüfen, ob die Verbindung erfolgreich war
-    if (!$conn) {
-        die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
-    }
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    // Daten in die Tabelle einfügen
-    $sql = "select * from datas";
+        // Überprüfen, ob die Verbindung erfolgreich war
+        if (!$conn) {
+            die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
+        }
 
-    $result = mysqli_query($conn, $sql);
+        // Daten in die Tabelle einfügen
+        $sql = "select * from datas";
 
-
-    echo "<table>
-<tr>
-<th>datas_ID</th>
-<th>recorded_time</th>
-<th>temp</th>
-<th>pressure</th>
-<th>humidity</th>
-<th>wind</th>
-<th>uptime</th>
-</tr>";
-    while ($row = mysqli_fetch_array($result)) {
-        echo "<tr>";
-        echo "<td>" . $row['datas_ID'] . "</td>";
-        echo "<td>" . $row['recorded_time'] . "</td>";
-        echo "<td>" . $row['temp'] . "</td>";
-        echo "<td>" . $row['pressure'] . "</td>";
-        echo "<td>" . $row['humidity'] . "</td>";
-        echo "<td>" . $row['wind'] . "</td>";
-        echo "<td>" . $row['uptime'] . "</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-    mysqli_close($conn);
-
-    ?>
+        $result = mysqli_query($conn, $sql);
 
 
+        echo "<table>
+            <tr>
+                <th>datas_ID</th>
+                <th>recorded_time</th>
+                <th>temp</th>
+                <th>pressure</th>
+                <th>humidity</th>
+                <th>wind</th>
+                <th>uptime</th>
+            </tr>";
+        while ($row = mysqli_fetch_array($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['datas_ID'] . "</td>";
+            echo "<td>" . $row['recorded_time'] . "</td>";
+            echo "<td>" . $row['temp'] . "</td>";
+            echo "<td>" . $row['pressure'] . "</td>";
+            echo "<td>" . $row['humidity'] . "</td>";
+            echo "<td>" . $row['wind'] . "</td>";
+            echo "<td>" . $row['uptime'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        mysqli_close($conn);
+
+        ?>
+
+    </div>
 
 
 

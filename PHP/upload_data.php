@@ -10,8 +10,9 @@ $humidity = $w_data[2];
 $wind = $w_data[3];
 $uptime = $w_data[4];
 // ------------------ Get values from HTTP -------------------------------------
-$get_time = date("d-m-Y H:i:s"); // Get local time from server
+$get_time = date("Y-m-d");// Get local time from server
 
+echo $get_time;
 
 // Verbindung zur Datenbank herstellen
 $servername = "localhost";
@@ -35,8 +36,6 @@ $sql .= $humidity . ",";
 $sql .= $wind . ",";
 $sql .= $uptime . ");";
 
-echo $sql;
-
 
 if (mysqli_query($conn, $sql)) {
         echo "Daten erfolgreich hinzugefügt";
@@ -46,5 +45,4 @@ if (mysqli_query($conn, $sql)) {
 // Verbindung schließen
 mysqli_close($conn);
 // ------------------ Write values to textfile ---------------------------------
-echo "Uplink File";
 ?>
