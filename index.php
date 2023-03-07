@@ -30,10 +30,7 @@
 <body>
 
     <h1>Wetterstation</h1>
-
-    <div>
-        <button>reload</button>
-    </div>
+    <h3>Test</h3>
 
     
 
