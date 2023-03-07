@@ -1,0 +1,1 @@
+Time: 03-03-2023 15:07:23 Temp: 23° *C Pressure: 1013 hPa H/Pa Humidity: feuchtigkeit % Wind: wind Km/h Runtime: kmh sec. 
