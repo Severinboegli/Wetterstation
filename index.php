@@ -44,7 +44,7 @@
         // reloads the datas every 8 seconds
         const interval = setInterval(function () {
             reload();
-        }, 8000);
+        }, 1000);
     </script>
 </head>
 

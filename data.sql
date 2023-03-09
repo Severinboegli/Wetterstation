@@ -1,3 +1,5 @@
+create database wetterstation;
+
 create table datas(
     datas_ID int not null auto_increment,
     recorded_time date,
