@@ -44,5 +44,4 @@ if (mysqli_query($conn, $sql)) {
 }
 // Verbindung schließen
 mysqli_close($conn);
-// ------------------ Write values to textfile ---------------------------------
 ?>
