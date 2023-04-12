@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #333;
+  color: #dddddd;
+  padding: 0 5%;
+}
+
+.navbar * {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-left {
+  display: flex;
+  /* Der Navbar-Text Container wird in der Reihenfolge vor das Logo gesetzt */
+  order: -1;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.navbar-left:hover {
+  background-color: #161616;
+}
+
+.navbar-right {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+.navbar-right-text {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-right-text-a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.navbar-right-text-a:hover {
+  background-color: #161616;
+}
+
+.navbar-logo {
+  height: 75%;
+  pointer-events: none;
+}
+
+.navbar-logo img {
+  height: 100%;
+}
