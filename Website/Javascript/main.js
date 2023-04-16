@@ -1,3 +1,6 @@
+var site = document.querySelector(":root");
+var darkmode = false;
+
 function up() {
   window.scrollTo({
     top: 0,
@@ -12,5 +15,22 @@ function nav() {
     x.className += " responsive";
   } else {
     x.className = "topnav";
+  }
+}
+
+// Change From Lightmode to Darkmode, for more functions
+function changeColorMode() {
+  if (!darkmode) {
+    site.style.setProperty("--main-text-color", "#dddddd");
+    site.style.setProperty("--main-bg-color", "#333");
+    site.style.setProperty("--main-bg-hover", "#161616");
+
+    darkmode = true;
+  } else {
+    site.style.setProperty("--main-text-color", "#333");
+    site.style.setProperty("--main-bg-color", "#dddddd");
+    site.style.setProperty("--main-bg-hover", "#ffffff");
+
+    darkmode = false;
   }
 }
