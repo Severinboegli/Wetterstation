@@ -25,11 +25,17 @@ function changeColorMode() {
     site.style.setProperty("--main-bg-color", "#333");
     site.style.setProperty("--main-bg-hover", "#161616");
 
+    site.style.setProperty("--out-text-color", "#101010");
+    site.style.setProperty("--out-bg-hover", "#333");
+
     darkmode = true;
   } else {
     site.style.setProperty("--main-text-color", "#333");
     site.style.setProperty("--main-bg-color", "#dddddd");
     site.style.setProperty("--main-bg-hover", "#ffffff");
+
+    site.style.setProperty("--out-text-color", "#333");
+    site.style.setProperty("--out-bg-hover", "#101010");
 
     darkmode = false;
   }
