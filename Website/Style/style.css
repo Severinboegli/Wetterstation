@@ -4,6 +4,10 @@
   --main-text-color: #333;
   --main-bg-color: #dddddd;
   --main-bg-hover: #161616;
+
+  --out-text-color: #333;
+  --out-bg-color: #dddddd;
+  --out-bg-hover: #161616;
 }
 
 * {
@@ -22,14 +26,14 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  background-color: var(--main-text-color);
-  color: var(--main-bg-color);
+  background-color: var(--out-text-color);
+  color: var(--out-bg-color);
   padding: 0 5%;
 }
 
 .navbar * {
   text-decoration: none;
-  color: var(--main-bg-color);
+  color: var(--out-bg-color);
 }
 
 .navbar-left {
@@ -43,7 +47,7 @@ body {
 }
 
 .navbar-left:hover {
-  background-color: var(--main-bg-hover);
+  background-color: var(--out-bg-hover);
 }
 
 .navbar-right {
@@ -70,7 +74,7 @@ body {
 }
 
 .navbar-right-text-a:hover {
-  background-color: var(--main-bg-hover);
+  background-color: var(--out-bg-hover);
 }
 
 .navbar-logo {
@@ -83,7 +87,7 @@ body {
 }
 
 #icon {
-  fill: var(--main-bg-color);
+  fill: var(--out-bg-color);
 }
 
 main {
@@ -111,6 +115,7 @@ main {
 
 .Column-Img img {
   margin: 0 20px;
+  height: 100%;
 }
 
 .Column-Button {
@@ -147,7 +152,7 @@ main {
 
 footer {
   width: 100%;
-  background: var(--main-text-color);
+  background: var(--out-text-color);
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -158,7 +163,7 @@ footer {
 }
 
 footer * {
-  color: var(--main-bg-color);
+  color: var(--out-bg-color);
 }
 
 @media only screen and (max-width: 800px) {
