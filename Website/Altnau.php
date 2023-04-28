@@ -39,11 +39,11 @@
 
     <!-- Main Content-->
     <main>
-        <h1 class="title">Aktuelles Wetter</h1>
+        <h1 class="title">Wetter Altnau</h1>
 
         <!-- Picture Column -->
         <div class="Column-Img">
-            <img src="./Images/wolkig.png" alt="Wolkig" />
+            <img src="./Images/meteorology.png" alt="Meteorology" />
         </div>
 
 
