@@ -78,4 +78,3 @@ void loop() {
   
   delay(5000); // Warte 5 Sekunden, bevor du erneut Daten sendest
 }
-
