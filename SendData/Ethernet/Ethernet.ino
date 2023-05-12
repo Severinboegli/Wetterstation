@@ -31,6 +31,23 @@ void loop() {
     //client.println("Connection: close");
     //client.println();
 
+    Serial.print(F("Temperature = "));
+    Serial.print(bmp.readTemperature());
+    Serial.println(" *C");
+
+    Serial.print(F("Pressure = "));
+    Serial.print(bmp.readPressure());
+    Serial.println(" Pa");
+
+    Serial.print(F("Approx altitude = "));
+    Serial.print(bmp.readAltitude(1013.25)); /* Adjusted to local forecast! */
+    Serial.println(" m");
+
+    Serial.println();
+    delay(2000);
+
+
+
     String postData = "wx=2~2~2~2~2";
 
     client.println("POST /wetterstation/Website/PHP/upload_data.php HTTP/1.1");
@@ -62,28 +79,3 @@ void loop() {
   delay(5000); // Warte 5 Sekunden, bevor du erneut Daten sendest
 }
 
-
-void sendhttp() {
-  if (client.connect(ip, 80)) { //Replace it with your IP/Domain | 80 = Default Port for HTTP
-    client.print("POST ");
-    client.print("/wetterstation/Website/PHP/upload_data.php"); //Path of your File (if your no path replace it with "/uplink.php"
-    client.println(" HTTP/1.1");
-    client.print("Host: ");
-    client.println(ip); //Replace it with your IP/Domain
-    client.println("User-Agent: Arduino/1.0");
-    client.println("Connection: close");
-    client.print("Content-Length: ");
-    client.println("128");
-    client.println();
-    client.print("wx=7~7~7~7~7");
-    client.print("&submit=Submit");
-    client.println();
-
-    Serial.print("Sent");
-  }
-  delay(1000);
-  if (client.connected()) {
-    Serial.print("Test");
-    client.stop();
-  }
-}
