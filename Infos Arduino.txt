@@ -1,8 +1,11 @@
 Arduino Pin auf Board angeschlossen:
 A8:61:0A:AE:97:E3
-
+Name: S2
+IP: 192.168.200.xx
 
 Arduino Pin direkt angeschlossen:
 A8:61:0A:AE:8A:2A
+Name: S1
+IP: 192.168.100.xx
 
 
