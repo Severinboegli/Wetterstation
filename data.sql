@@ -14,4 +14,4 @@ create table datas(
 insert into datas values(null,recorded_time,temp,pressure,humidity,wind,uptime);
 
 // leeren einer Tabelle
-DELETE FROM <Tablename>;
+//DELETE FROM <Tablename>;
