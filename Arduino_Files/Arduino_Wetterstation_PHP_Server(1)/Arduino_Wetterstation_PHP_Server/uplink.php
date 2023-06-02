@@ -15,8 +15,7 @@ $get_time = date("d-m-Y H:i:s"); // Get local time from server
 
 // ------------------ Write values to textfile ---------------------------------
 $textfile = fopen("Files/receive.txt", "w") or die("Unable to open file!");
-$txt = "Time: " . $get_time . " Temp: " . $temp . " *C Pressure: " . $pressure .
-        " H/Pa Humidity: " . $humidity . " % Wind: " . $wind . " Km/h Runtime: " .
+$txt = "Time: " . $get_time . " Temp: " . $temp . " *C Pressure: " . $pressure . " Km/h Runtime: " .
         $uptime . " sec. \n";
 fwrite($textfile, $txt); // Write to textfile
 fclose($textfile); //Close textfile
