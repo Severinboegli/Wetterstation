@@ -25,21 +25,12 @@ void loop()
     Serial.println("Verbunden mit dem Server");
 
     // Daten löschen
-<<<<<<< HEAD
     // client.println("GET /wetterstation/Website/PHP/clear_datas.php");
     // client.println("POST /wetterstation/Website/PHP/upload_data.php")
     // client.print("Host: ");
     // client.println(serverIP);
     // client.println("Connection: close");
     // client.println();
-=======
-    //client.println("GET /wetterstation/Website/PHP/clear_datas.php");
-    //client.println("POST /wetterstation/Website/PHP/upload_data.php")
-    //client.print("Host: ");
-    //client.println(serverIP);
-    //client.println("Connection: close");
-    //client.println();
->>>>>>> parent of 88ac6a8 (Update Ethernet.ino)
 
     String postData = "wx=2~2~2~2~2";
 
@@ -73,7 +64,6 @@ void loop()
   delay(5000); // Warte 5 Sekunden, bevor du erneut Daten sendest
 }
 
-<<<<<<< HEAD
 void sendhttp()
 {
   if (client.connect(ip, 80))
@@ -83,16 +73,6 @@ void sendhttp()
     client.println(" HTTP/1.1");
     client.print("Host: ");
     client.println(ip); // Replace it with your IP/Domain
-=======
-
-void sendhttp() {
-  if (client.connect(ip, 80)) { //Replace it with your IP/Domain | 80 = Default Port for HTTP
-    client.print("POST ");
-    client.print("/wetterstation/Website/PHP/upload_data.php"); //Path of your File (if your no path replace it with "/uplink.php"
-    client.println(" HTTP/1.1");
-    client.print("Host: ");
-    client.println(ip); //Replace it with your IP/Domain
->>>>>>> parent of 88ac6a8 (Update Ethernet.ino)
     client.println("User-Agent: Arduino/1.0");
     client.println("Connection: close");
     client.print("Content-Length: ");
@@ -105,12 +85,8 @@ void sendhttp() {
     Serial.print("Sent");
   }
   delay(1000);
-<<<<<<< HEAD
   if (client.connected())
   {
-=======
-  if (client.connected()) {
->>>>>>> parent of 88ac6a8 (Update Ethernet.ino)
     Serial.print("Test");
     client.stop();
   }
