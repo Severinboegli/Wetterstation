@@ -21,6 +21,9 @@ body {
   background: var(--main-bg-color);
 }
 
+
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -111,6 +114,25 @@ main {
   flex-direction: row;
   justify-content: space-around;
   margin: 30px 0;
+}
+
+* {
+}
+
+#table {
+  margin: 30px 0;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 8px;
 }
 
 .Column-Img img {
