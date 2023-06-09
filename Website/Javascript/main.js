@@ -23,9 +23,9 @@ function changeColorMode() {
   if (!darkmode) {
     site.style.setProperty("--main-text-color", "#dddddd");
     site.style.setProperty("--main-bg-color", "#333");
-    site.style.setProperty("--main-bg-hover", "#161616");
+    site.style.setProperty("--main-bg-hover", "#000");
 
-    site.style.setProperty("--out-text-color", "#101010");
+    site.style.setProperty("--out-text-color", "#000");
     site.style.setProperty("--out-bg-hover", "#333");
 
     darkmode = true;
