@@ -39,71 +39,61 @@
 
     <!-- Main Content-->
     <main>
-        <h1 class="title">Aktuelles Wetter</h1>
+        <h1 class="title">Wetter Illighausen</h1>
 
         <!-- Picture Column -->
         <div class="Column-Img">
-            <img src="./Images/rain.png" alt="Regen" />
-            <img src="./Images/wolkig.png" alt="Wolkig" />
+            <img src="./Images/meteorology.png" alt="Meteorology" />
         </div>
 
-        <!-- Button Column -->
-        <div class="Column-Button">
-            <a href="./Illighausen.html">Illighausen</a>
-            <a href="./Altnau.php">Altnau</a>
-        </div>
 
-        <!-- Text Column-->
-        <div class="Column-Full">
-            <h3>Projektidee:</h3>
-            <br />
-            <p>
-                Wir wollen eine oder zwei Wetterstationen mit Sensoren bauen, die
-                Daten auslesen kann und in einer Datenbank speichern kann. Als
-                Benutzerschnittstelle werden wir eine Webseite mit einem Webserver
-                hosten, die die ausgelesenen Daten grafisch darstellen kann. Am Ende
-                des Projektes werden wir eine Wetterstation mit verschiedenen Sensoren
-                haben, die automatisch die gesammelten Messwerte auf die Datenbank
-                schreibt. Wir werden als Vorlage eine
-                <a class="inner-link" href="https://www.aeq-web.com/arduino-wetterstation/"
-                    target="_blank">Anleitung</a>
-                von aeq-web nehmen.
+        <div id="table">
 
-                <br /><br />
+            <?php
 
-                Wir werden zwei Wetterstationen bauen, damit die Daten von zwei
-                Standorten ausgelesen werden können. Dies würde uns ermöglichen, das
-                wir Beide die Wetterstation weiter nutzen können.
-            </p>
+            // Verbindung zur Datenbank herstellen
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "wetterstation";
 
-            <br />
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ex,
-                nostrum est illum id non voluptatibus sit? Illum necessitatibus nihil
-                accusantium dolorum, esse, earum quia alias eum et aliquid fugit
-                dignissimos dolore adipisci officiis temporibus rerum nulla, ipsum
-                ducimus iste perferendis recusandae repellendus reprehenderit soluta.
-                Expedita nam iure minus optio doloribus odio dolorum assumenda
-                ducimus, laborum nobis quisquam aperiam recusandae ut dolorem, ipsum
-                vel perspiciatis laboriosam amet modi. Animi aliquid doloremque facere
-                cupiditate dolore, quod tenetur iure minus laudantium ipsum qui nihil
-                ipsam maiores obcaecati dolor placeat ea voluptates deleniti
-                accusantium eveniet hic tempora. Cupiditate, sunt magni? Doloremque
-                corporis repellat error ratione quisquam illo explicabo, accusantium
-                distinctio voluptates assumenda quas eum, aliquam eveniet pariatur
-                veniam sit, alias amet nobis tempora aliquid? Incidunt debitis esse ab
-                nobis deserunt. Ipsum error sapiente perspiciatis distinctio maiores?
-                Facilis nesciunt ipsum ipsa assumenda deleniti consequatur dolorem ab,
-                porro eveniet officiis voluptatem corrupti doloribus, placeat
-                voluptatibus vitae inventore iure asperiores earum. Asperiores
-                repudiandae maiores consequuntur, corporis reprehenderit quam vel
-                distinctio sapiente, maxime culpa, vero incidunt tempora similique!
-                Qui ab fuga minima hic. Neque iste incidunt impedit obcaecati tempora
-                dicta! Ad iusto quos a harum voluptatem necessitatibus non enim.
-                Cupiditate iste debitis voluptas doloremque porro totam dolor.
-            </p>
-        </div>
+            // Überprüfen, ob die Verbindung erfolgreich war
+            if (!$conn) {
+                die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
+            }
+
+            // Daten in die Tabelle einfügen
+            $sql = "select * from datas order by datas_ID desc";
+
+            $result = mysqli_query($conn, $sql);
+
+
+            echo "<table>
+            <tr>
+                <th>datas_ID</th>
+                <th>recorded_time</th>
+                <th>temp</th>
+                <th>pressure</th>
+                <th>humidity</th>
+            </tr>";
+            while ($row = mysqli_fetch_array($result)) {
+                echo "<tr>";
+                echo "<td>" . $row['datas_ID'] . "</td>";
+                echo "<td>" . $row['recorded_time'] . "</td>";
+                echo "<td>" . $row['temp'] . "</td>";
+                echo "<td>" . $row['pressure'] . "</td>";
+                echo "<td>" . $row['humidity'] . "</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            mysqli_close($conn);
+
+            ?>
+
+
+
     </main>
 
     <!-- Footer -->
@@ -116,6 +106,7 @@
     </footer>
 
     <script type="text/javascript" src="./Javascript/main.js"></script>
+    <script type="text/javascript" src="./Javascript/auto_update.js"></script>
 </body>
 
 </html>
