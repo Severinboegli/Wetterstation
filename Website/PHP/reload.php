@@ -14,22 +14,20 @@
         }
 
         // Daten in die Tabelle einfügen
-        $sql = "select * from datas order by datas_ID desc";
+        $sql = "select * from datas order by datas_ID desc limit 10";
 
         $result = mysqli_query($conn, $sql);
 
 
         echo "<table>
             <tr>
-                <th>datas_ID</th>
-                <th>recorded_time</th>
-                <th>temp</th>
-                <th>pressure</th>
-                <th>humidity</th>
+            <th>Datum</th>
+            <th>Temperatur</th>
+            <th>Luftdruck</th>
+            <th>Luftfeuchtigkeit</th>
             </tr>";
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr>";
-            echo "<td>" . $row['datas_ID'] . "</td>";
             echo "<td>" . $row['recorded_time'] . "</td>";
             echo "<td>" . $row['temp'] . "</td>";
             echo "<td>" . $row['pressure'] . "</td>";
