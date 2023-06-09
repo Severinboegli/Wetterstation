@@ -161,6 +161,19 @@ th {
   color: var(--main-bg-color);
 }
 
+p.datas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  text-decoration: none;
+  width: 25%;
+  height: 50px;
+  border: none;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+}
+
 .Column-Full {
   display: flexbox;
   width: 70%;
@@ -219,6 +232,13 @@ footer * {
   }
 
   .Column-Button a {
+    width: auto;
+    height: 50px;
+    border: none;
+    margin: 10px 0;
+  }
+
+  .datas {
     width: auto;
     height: 50px;
     border: none;
