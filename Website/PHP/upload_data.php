@@ -7,8 +7,6 @@ $w_data = explode("~", $get_weatherdata); // Split POST-String
 $temp = $w_data[0];
 $pressure = $w_data[1];
 $humidity = $w_data[2];
-$wind = $w_data[3];
-$uptime = $w_data[4];
 // ------------------ Get values from HTTP -------------------------------------
 $get_time = date("Y-m-d");// Get local time from server
 
@@ -32,9 +30,7 @@ $sql = "insert into datas values(null,";
 $sql .= "'" . $get_time . "',";
 $sql .= $temp . ",";
 $sql .= $pressure . ",";
-$sql .= $humidity . ",";
-$sql .= $wind . ",";
-$sql .= $uptime . ");";
+$sql .= $humidity . ");";
 
 
 if (mysqli_query($conn, $sql)) {
