@@ -11,10 +11,10 @@
 
 Adafruit_BMP280 bmp; // I2C
 
-byte mac[] = {0xA8, 0x61, 0x0A, 0xAE, 0x97, 0xE3};
+byte mac[] = {0xA8, 0x61, 0x0A, 0xAE, 0x8A, 0x2A};
 
-IPAddress ip(192, 168, 137, 2);       // IP-Adresse des Arduino
-IPAddress serverIP(192, 168, 137, 1); // IP-Adresse des Servers, an den du Daten senden möchtest
+IPAddress ip(192, 168, 100, 2);       // IP-Adresse des Arduino
+IPAddress serverIP(192, 168, 100, 1); // IP-Adresse des Servers, an den du Daten senden möchtest
 int serverPort = 80;                  // Port des Servers
 
 EthernetClient client;
@@ -84,7 +84,7 @@ void loop()
     // client.println("Connection: close");
     // client.println();
 
-    String postData = "wx=" + String(bmp.readTemperature()) + "~" + String(bmp.readPressure()) + "~" + String(bmp.readAltitude(1013.25)) + "~2~2";
+    String postData = "wx=" + String(bmp.readTemperature()) + "~" + String(bmp.readPressure()) + "~" + String(bmp.readAltitude(1013.25));
 
     client.println("POST /wetterstation/Website/PHP/upload_data.php HTTP/1.1");
     client.print("Host: ");
