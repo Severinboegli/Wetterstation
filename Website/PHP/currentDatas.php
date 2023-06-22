@@ -20,7 +20,7 @@ $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_array($result)) {
     echo "<p class='datas' >" . $row['temp'] . "° Grad</p>";
     echo "<p class='datas' >" . $row['pressure'] . "° Bar</p>";
-    echo "<p class='datas' >" . $row['humidity'] . "</p>";
+    echo "<p class='datas' >" . $row['humidity'] . " g/m3</p>";
 }
 
 mysqli_close($conn);
