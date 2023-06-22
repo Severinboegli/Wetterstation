@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 // Daten in die Tabelle einfügen
-$sql = "select * from datas order by datas_ID desc limit 10";
+$sql = "select * from datas order by datas_ID desc";
 
 $result = mysqli_query($conn, $sql);
 
@@ -25,15 +25,15 @@ echo "<table>
             <th>Luftdruck</th>
             <th>Luftfeuchtigkeit</th>
             </tr>";
-while ($row = mysqli_fetch_array($result)) {
-    echo "<tr>";
-    echo "<td>" . $row['recorded_time'] . "</td>";
-    echo "<td>" . $row['temp'] . "° C</td>";
-    echo "<td>" . $row['pressure'] / 100 . " hPa</td>";
-    echo "<td>" . $row['humidity'] . "</td>";
-    echo "</tr>";
-}
-echo "</table>";
-mysqli_close($conn);
+        while ($row = mysqli_fetch_array($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['recorded_time'] . "</td>";
+            echo "<td>" . $row['temp'] . "</td>";
+            echo "<td>" . $row['pressure'] . "</td>";
+            echo "<td>" . $row['humidity'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        mysqli_close($conn);
 
 ?>
