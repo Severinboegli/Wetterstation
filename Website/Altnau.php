@@ -4,24 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wetter Standort 1</title>
+    <title>Wetter Altnau</title>
     <link rel="stylesheet" href="./Style/style.css" />
+    <link rel="stylesheet" href="./Style/reset.css" />
     <link rel="stylesheet" href="./Style/Switch.css" />
 </head>
 
-
-<script type="text/javascript" src="./Javascript/main.js"></script>
-<script type="text/javascript" src="./Javascript/auto_update.js"></script>
-
-<body onload="loadDatas()">
+<body onload="reload()">
     <!-- Header -->
     <nav class="navbar">
         <a class="navbar-left" href="./">Home</a>
 
         <div class="navbar-right">
             <div class="navbar-right-text">
-                <a class="navbar-right-text-a" href="./Altnau.php">Standort 1</a>
-                <a class="navbar-right-text-a" href="./Illighausen.php">Standort 2</a>
+                <a class="navbar-right-text-a" href="./Altnau.php">Altnau</a>
+                <a class="navbar-right-text-a" href="./Illighausen.php">Illighausen</a>
             </div>
             <!-- Switch-->
             <label class="switch navbar-switch">
@@ -42,13 +39,11 @@
 
     <!-- Main Content-->
     <main>
-        <h1 class="title">Messdaten Station 1</h1>
-
-        <h2>Letzte Messdaten</h2>
-
+        <h1 class="title">Wetter Altnau</h1>
         <div class="Column-Button" id="titleDatas">
-            <p class="datas"></p>
-            <p class="datas"></p>
+            <p class="datas">Test</p>
+            <p class="datas">Test</p>
+            <p class="datas">Test</p>
         </div>
 
         <!-- Picture Column -->
@@ -72,6 +67,9 @@
             & Timo Schreiber
         </p>
     </footer>
+
+    <script type="text/javascript" src="./Javascript/main.js"></script>
+    <script type="text/javascript" src="./Javascript/auto_update.js"></script>
 </body>
 
 </html>

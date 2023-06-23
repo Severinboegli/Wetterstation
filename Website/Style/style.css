@@ -238,17 +238,14 @@ footer * {
     margin: 10px 0;
   }
 
-  p.datas {
+  .datas {
     width: auto;
     height: 50px;
     border: none;
     margin: 10px 0;
-    width: 100%;
   }
 
   .Column-Full h3 {
     font-size: 25px;
   }
-
-  
 }

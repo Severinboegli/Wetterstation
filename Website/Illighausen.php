@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wetter Standort 2</title>
+    <title>Wetter Illighausen</title>
     <link rel="stylesheet" href="./Style/style.css" />
     <link rel="stylesheet" href="./Style/reset.css" />
     <link rel="stylesheet" href="./Style/Switch.css" />
 </head>
 
-<body onload="loadDatas()">
+<body onload="reload()">
     <!-- Header -->
     <nav class="navbar">
         <a class="navbar-left" href="./">Home</a>
 
         <div class="navbar-right">
             <div class="navbar-right-text">
-                <a class="navbar-right-text-a" href="./Altnau.php">Standort 1</a>
-                <a class="navbar-right-text-a" href="./Illighausen.php">Standort 2</a>
+                <a class="navbar-right-text-a" href="./Altnau.php">Altnau</a>
+                <a class="navbar-right-text-a" href="./Illighausen.php">Illighausen</a>
             </div>
             <!-- Switch-->
             <label class="switch navbar-switch">
@@ -40,12 +40,10 @@
     <!-- Main Content-->
     <main>
         <h1 class="title">Wetter Illighausen</h1>
-
-        <h2>Letzte Messdaten</h2>
-
         <div class="Column-Button" id="titleDatas">
-            <p class="datas"></p>
-            <p class="datas"></p>
+            <p class="datas">Test</p>
+            <p class="datas">Test</p>
+            <p class="datas">Test</p>
         </div>
 
         <!-- Picture Column -->
@@ -55,47 +53,7 @@
 
 
         <div id="table">
-
-            <?php
-
-            // Verbindung zur Datenbank herstellen
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "wetterstation";
-
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-            // Überprüfen, ob die Verbindung erfolgreich war
-            if (!$conn) {
-                die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
-            }
-
-            // Daten in die Tabelle einfügen
-            $sql = "select * from datas order by datas_ID desc";
-
-            $result = mysqli_query($conn, $sql);
-
-
-            echo "<table>
-            <tr>
-                <th>Datum</th>
-                <th>Temperatur</th>
-                <th>Luftdruck</th>
-                <th>Luftfeuchtigkeit</th>
-            </tr>";
-            while ($row = mysqli_fetch_array($result)) {
-                echo "<tr>";
-                echo "<td>" . $row['recorded_time'] . "</td>";
-                echo "<td>" . $row['temp'] . "</td>";
-                echo "<td>" . $row['pressure'] . "</td>";
-                echo "<td>" . $row['humidity'] . "</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-            mysqli_close($conn);
-
-            ?>
+        </div>
 
 
 
