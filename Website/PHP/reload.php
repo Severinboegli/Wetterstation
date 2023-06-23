@@ -17,6 +17,7 @@ $sql = "select * from datas order by datas_ID desc limit 10";
 
 $result = mysqli_query($conn, $sql);
 
+header("Refresh:1");
 
 echo "<table>
             <tr>

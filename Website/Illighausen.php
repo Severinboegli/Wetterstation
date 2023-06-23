@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wetter Standort 2</title>
+    <title>Wetter Station 2</title>
     <link rel="stylesheet" href="./Style/style.css" />
     <link rel="stylesheet" href="./Style/reset.css" />
     <link rel="stylesheet" href="./Style/Switch.css" />
@@ -39,7 +39,7 @@
 
     <!-- Main Content-->
     <main>
-        <h1 class="title">Wetter Illighausen</h1>
+        <h1 class="title">Messdaten Station 2</h1>
 
         <h2>Letzte Messdaten</h2>
 
@@ -104,9 +104,12 @@
     <!-- Footer -->
     <footer>
         <p>
+
             &copy 2023
             <a href="https://github.com/Severinboegli" target="_blank" class="inner-link">Severin Bögli</a>
-            & Timo Schreiber
+            <p>&nbsp;&&nbsp;</p>
+            <a href="https://github.com/tschamp" target="_blank" class="inner-link"> Timo Schreiber</a>
+
         </p>
     </footer>
 
