@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./Style/Switch.css" />
 </head>
 
-<body onload="reload()">
+<body onload="()">
     <!-- Header -->
     <nav class="navbar">
         <a class="navbar-left" href="./">Home</a>
