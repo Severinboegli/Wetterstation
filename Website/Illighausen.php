@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./Style/Switch.css" />
 </head>
 
-
 <script type="text/javascript" src="./Javascript/main.js"></script>
 <script type="text/javascript" src="./Javascript/auto_update_illighausen.js"></script>
 
@@ -58,7 +57,8 @@
 
 
         <div id="table">
-        </div>
+
+            </table>
 
 
 
@@ -69,8 +69,8 @@
         <p>
             &copy 2023
             <a href="https://github.com/Severinboegli" target="_blank" class="inner-link">Severin Bögli</a>
-            <p>&nbsp;&&nbsp;</p>
-            <a href="https://github.com/tschamp" target="_blank" class="inner-link"> Timo Schreiber</a>
+        <p>&nbsp;&&nbsp;</p>
+        <a href="https://github.com/tschamp" target="_blank" class="inner-link"> Timo Schreiber</a>
 
         </p>
     </footer>
