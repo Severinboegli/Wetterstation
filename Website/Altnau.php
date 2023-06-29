@@ -11,7 +11,7 @@
 
 
 <script type="text/javascript" src="./Javascript/main.js"></script>
-<script type="text/javascript" src="./Javascript/auto_update.js"></script>
+<script type="text/javascript" src="./Javascript/auto_update_altnau.js"></script>
 
 <body onload="loadDatas()">
     <!-- Header -->
