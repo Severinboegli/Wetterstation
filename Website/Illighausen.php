@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./Style/Switch.css" />
 </head>
 
+<script type="text/javascript" src="./Javascript/main.js"></script>
+<script type="text/javascript" src="./Javascript/auto_update_illighausen.js"></script>
+
 <body onload="loaddatasforillighausen()">
     <!-- Header -->
     <nav class="navbar">
@@ -56,46 +59,7 @@
 
         <div id="table">
 
-            <?php
-
-            // Verbindung zur Datenbank herstellen
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "wetterstation";
-
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-            // Überprüfen, ob die Verbindung erfolgreich war
-            if (!$conn) {
-                die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
-            }
-
-            // Daten in die Tabelle einfügen
-            $sql = "select * from datas order by datas_ID desc";
-
-            $result = mysqli_query($conn, $sql);
-
-
-            echo "<table>
-            <tr>
-                <th>Datum</th>
-                <th>Temperatur</th>
-                <th>Luftdruck</th>
-                <th>Luftfeuchtigkeit</th>
-            </tr>";
-            while ($row = mysqli_fetch_array($result)) {
-                echo "<tr>";
-                echo "<td>" . $row['recorded_time'] . "</td>";
-                echo "<td>" . $row['temp'] . "</td>";
-                echo "<td>" . $row['pressure'] . "</td>";
-                echo "<td>" . $row['humidity'] . "</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-            mysqli_close($conn);
-
-            ?>
+            </table>
 
 
 
@@ -107,8 +71,8 @@
 
             &copy 2023
             <a href="https://github.com/Severinboegli" target="_blank" class="inner-link">Severin Bögli</a>
-            <p>&nbsp;&&nbsp;</p>
-            <a href="https://github.com/tschamp" target="_blank" class="inner-link"> Timo Schreiber</a>
+        <p>&nbsp;&&nbsp;</p>
+        <a href="https://github.com/tschamp" target="_blank" class="inner-link"> Timo Schreiber</a>
 
         </p>
     </footer>

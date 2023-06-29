@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 // Daten in die Tabelle einfügen
-$sql = "select * from datas order by datas_ID desc limit 10;";
+$sql = "select * from datas order by datas_ID desc limit 1;";
 
 $result = mysqli_query($conn, $sql);
 
