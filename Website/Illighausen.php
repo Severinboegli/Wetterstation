@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./Style/Switch.css" />
 </head>
 
-<body onload="loadDatas()">
+<body onload="loaddatasforillighausen()">
     <!-- Header -->
     <nav class="navbar">
         <a class="navbar-left" href="./">Home</a>

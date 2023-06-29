@@ -5,7 +5,7 @@ function reload() {
       document.getElementById("table").innerHTML = this.responseText;
     }
   };
-  xmlhttp.open("GET", "./PHP/reload.php", true);
+  xmlhttp.open("GET", "./PHP/reload-altnau.php", true);
   xmlhttp.send();
 }
 
@@ -16,7 +16,7 @@ function currentData() {
       document.getElementById("titleDatas").innerHTML = this.responseText;
     }
   };
-  xmlhttp.open("GET", "./PHP/currentDatas.php", true);
+  xmlhttp.open("GET", "./PHP/currentDatas-Altnau.php", true);
   xmlhttp.send();
 }
 
