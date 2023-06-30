@@ -35,12 +35,10 @@ function loadDatas() {
 
 
 // reloads the datas every 8 seconds
-/*
+
 
 const interval = setInterval(function () {
   reload();
   currentData();
 }, 1000);
 
-
-*/

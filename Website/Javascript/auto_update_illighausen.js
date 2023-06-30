@@ -35,13 +35,13 @@ function reloadillighausen() {
   
   
   // reloads the datas every 8 seconds
-  /*
+
   
   const interval = setInterval(function () {
-    reload();
-    currentData();
+    reloadillighausen();
+    currentDataillighausen();
+
   }, 1000);
   
   
-  */
   
