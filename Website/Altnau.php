@@ -57,7 +57,7 @@
         </div>
 
 
-        <div id="table">
+        <div class="table">
         </div>
 
 
@@ -69,8 +69,8 @@
         <p>
             &copy 2023
             <a href="https://github.com/Severinboegli" target="_blank" class="inner-link">Severin Bögli</a>
-            <p>&nbsp;&&nbsp;</p>
-            <a href="https://github.com/tschamp" target="_blank" class="inner-link"> Timo Schreiber</a>
+        <p>&nbsp;&&nbsp;</p>
+        <a href="https://github.com/tschamp" target="_blank" class="inner-link"> Timo Schreiber</a>
 
         </p>
     </footer>
