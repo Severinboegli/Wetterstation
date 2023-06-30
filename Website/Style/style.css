@@ -250,5 +250,11 @@ footer * {
     font-size: 25px;
   }
 
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
   
 }
