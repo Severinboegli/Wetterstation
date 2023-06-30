@@ -86,7 +86,7 @@ void loop()
 
     String postData = "wx=" + String(bmp.readTemperature()) + "~" + String(bmp.readPressure()) + "~" + String(bmp.readAltitude(1013.25));
 
-    client.println("POST /wetterstation/Website/PHP/upload_data.php HTTP/1.1");
+    client.println("POST /wetterstation/Website/PHP/upload_data_illighausen.php HTTP/1.1");
     client.print("Host: ");
     client.println(serverIP);
     client.println("Content-Type: application/x-www-form-urlencoded");
