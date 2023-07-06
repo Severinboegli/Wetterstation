@@ -21,10 +21,10 @@ header("Refresh:1");
 
 echo "<table>
             <tr>
-            <th>Datum</th>
-            <th>Temperatur</th>
-            <th>Luftdruck</th>
-            <th>Luftfeuchtigkeit</th>
+            <th>Date</th>
+            <th>Temperature</th>
+            <th>Pressure</th>
+            <th>Humidity</th>
             </tr>";
 while ($row = mysqli_fetch_array($result)) {
     echo "<tr>";
