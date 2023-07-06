@@ -56,7 +56,7 @@
         </div>
 
 
-        <div class="table">
+        <div id="table">
 
             </table>
 
